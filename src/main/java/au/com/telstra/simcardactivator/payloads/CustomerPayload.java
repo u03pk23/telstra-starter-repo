@@ -21,7 +21,7 @@ public class CustomerPayload {
                 new ActuatorRequest(product.getIccid());
 
         // Call actuator microservice
-        Response actuatorResponse =
+        Response Response =
                 restTemplate.postForObject(
                         ACTUATOR_URL,
                         actuatorRequest,
@@ -29,7 +29,7 @@ public class CustomerPayload {
                 );
 
         // Print activation result
-        if (actuatorResponse != null && actuatorResponse.isSuccess()) {
+        if (Response != null && Response.isSuccess()) {
             System.out.println(
                     "SIM activation SUCCESS for ICCID: " + product.getIccid()
             );

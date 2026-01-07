@@ -1,4 +1,4 @@
-POST http://localhost:8080/product
+POST http://localhost:8080/product/activate
 Content-Type: application/json
 
 {
